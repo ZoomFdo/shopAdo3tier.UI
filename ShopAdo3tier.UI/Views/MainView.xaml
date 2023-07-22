@@ -1,0 +1,30 @@
+﻿<Window x:Class="ShopAdo3tier.UI.Views.MainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ShopAdo3tier.UI.Views"
+        xmlns:vm="clr-namespace:ShopAdo3tier.UI.ViewModels"
+        mc:Ignorable="d"
+        Title="Editor Db" Height="420" Width="1045">
+        
+    <Window.DataContext>
+        <vm:MainViewModel></vm:MainViewModel>
+    </Window.DataContext>
+    
+    
+    <Grid>
+        <!-- <DataGrid ItemsSource="{Binding Goods}"></DataGrid>-->
+        <!--<DataGridTextColumn Binding="{Binding Path=GoodId}" Header="GoodId" Width="100"/>-->
+            
+            <!--//Style//-->
+
+        <Border Background="#262F47"></Border>
+        <DataGrid x:Name="dgGoods" Margin="230,10,10,10" Loaded="dgGoods_Loaded" ItemsSource="{Binding Goods}"/>
+
+        <Button x:Name="btnListGoods" Height="30" Width="150" Content="List Goods" Margin="39,35,856,339"></Button>
+        <Button x:Name="btnCreateGood" Height="30" Width="150" Content="Create Good" Margin="39,25,856,229"></Button>
+        <Button x:Name="btnEditGood" Height="30" Width="150" Content="Edit Good" Margin="39,25,856,129"></Button>
+
+    </Grid>
+</Window>
